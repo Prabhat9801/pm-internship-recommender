@@ -1,0 +1,4 @@
+backend/.env.example
+backend/.env
+backend/internships.json
+backend/embeddings.json

@@ -1,0 +1,44 @@
+:root{
+  --pm-blue: #004aad;
+  --pm-blue-dark: #003280;
+  --muted: #64748b;
+  --card-bg: #ffffff;
+  --page-bg: #f3f6fb;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--page-bg);color:#0f172a}
+.navbar{background:var(--pm-blue);color:white;padding:12px 18px;box-shadow:0 2px 6px rgba(2,6,23,0.08)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{background:white;color:var(--pm-blue);font-weight:700;padding:8px 10px;border-radius:6px}
+.brand-text .title{font-weight:700}
+.nav-links .nav-link{color:rgba(255,255,255,0.9);margin-left:14px;text-decoration:none}
+
+.main{max-width:1100px;margin:18px auto;padding:0 16px}
+.hero{background:linear-gradient(90deg, rgba(0,74,173,0.05), rgba(0,74,173,0.02));padding:18px;border-radius:10px;margin-bottom:12px}
+.hero h1{margin:0;font-size:20px;color:var(--pm-blue-dark)}
+.hero .sub{margin:6px 0 0;color:var(--muted)}
+
+.card{background:var(--card-bg);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04);margin-bottom:12px}
+.form-card{display:flex;flex-direction:column;gap:10px}
+.form-row label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.form-row input,.form-row select{width:100%;padding:12px;border-radius:8px;border:1px solid #e6eef7}
+.form-actions{text-align:right}
+.btn-primary{background:var(--pm-blue);color:white;padding:10px 16px;border-radius:8px;border:0;cursor:pointer}
+.btn-primary:disabled{opacity:0.6;cursor:not-allowed}
+
+.results-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px;margin-top:12px}
+@media(min-width:880px){ .results-grid{grid-template-columns:repeat(2,1fr)} }
+
+.result-card h3{margin:0}
+.result-card .org{color:var(--muted);font-size:13px}
+.meta{color:var(--muted);font-size:13px;margin:8px 0}
+.skills{font-size:14px;margin:6px 0}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.apply-btn{background:#00a862;color:white;padding:8px 12px;border-radius:8px;text-decoration:none}
+.score{color:var(--muted);font-size:13px}
+
+.hint{color:var(--muted);margin-top:12px}
+.footer{text-align:center;color:var(--muted);padding:20px 0;margin-top:18px}
+.error{color:#ef4444;margin-top:10px}
