@@ -1,5 +1,7 @@
 # backend/recommender.py
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+# from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
+
 from dotenv import load_dotenv
 import os, json, numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
@@ -9,8 +11,12 @@ from datetime import datetime
 load_dotenv()
 
 # Initialize embeddings using your provided API wrapper
-EMBED_MODEL_NAME = "models/embedding-001"
-embeddings = GoogleGenerativeAIEmbeddings(model=EMBED_MODEL_NAME, dimensions=32)
+# EMBED_MODEL_NAME = "models/embedding-001"
+# EMBED_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+
+# HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+# embeddings = GoogleGenerativeAIEmbeddings(model=EMBED_MODEL_NAME, dimensions=32)
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 def load_internships(path="internships.json"):
     """Load internships from JSON file"""
